@@ -1,6 +1,6 @@
 import React from 'react';
 import Post from './Post/Post';
-import './PostContainer.css';
+
 
 
 class PostContainer extends React.Component{
@@ -10,7 +10,7 @@ class PostContainer extends React.Component{
 
     render(){
         return <div className='postContainer'>
-            {this.props.data.map(data => <Post key={data.id} data={data} comments={data.comments}/>)}
+            {this.props.data.map(data => <Post key={data.id} data={data} comments={data.comments}/>)}   
         </div>
     }
 }
