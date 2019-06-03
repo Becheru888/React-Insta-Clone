@@ -1,0 +1,31 @@
+.post{
+    box-shadow: 2px 2px 2px 2px rgb(235, 234, 234);
+    width: 500px;
+    margin: 20px;
+    border-radius: 2px;
+}
+
+.header{
+    position: flex;
+    align-items: flex-end;
+}
+
+.thumbnail{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    
+}
+
+span {
+    position: relative;
+    bottom: 20px;
+}
+
+.image-post{
+    width: 500px;
+    height: 350px;
+}
+
