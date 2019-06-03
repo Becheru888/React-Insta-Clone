@@ -13,7 +13,7 @@ function Comments (props) {
             <span className="username">
               {comment.username}
             </span>
-            <span className='comments-line'>{comment.text}</span>
+            <span className='comment-line'>{comment.text}</span>
           </span>
         ))}
         <input placeholder="Add a comment..." className='comm-input'/>

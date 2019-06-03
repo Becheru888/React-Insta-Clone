@@ -63,6 +63,12 @@ body {
   margin: 0 0 60px 0;
 }
 
+.icon {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+}
+
 .logos {
   display: flex;
   align-items: start;
@@ -131,8 +137,8 @@ span.username {
   font-family: 'Mandali', sans-serif;
 }
 
-.comments-line{
-
+.comment-line{
+  
 }
 
 
