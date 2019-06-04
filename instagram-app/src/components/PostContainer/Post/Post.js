@@ -14,7 +14,7 @@ function Post (props) {
                <img src={props.data.imageUrl} alt='' className='image-post'></img>
            </div>
            <div className='comments-section'>
-           <Comments comments={props.data.comments}/>
+           <Comments comments={props.data.comments} data={props.data}/>
            </div>
     </div>
 }

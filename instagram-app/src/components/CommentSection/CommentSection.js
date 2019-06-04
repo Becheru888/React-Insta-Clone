@@ -8,6 +8,7 @@ function Comments (props) {
         <img src='https://i.postimg.cc/mDvYdV1M/heart.png'/>
         <img src='https://i.postimg.cc/pLf6Kh7q/chat.png'/>
         </span>
+        {props.data.likes}
         {props.comments.map(comment => (
           <span key={comment.id}>
             <span className="username">
