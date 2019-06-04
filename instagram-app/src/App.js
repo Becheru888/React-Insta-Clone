@@ -5,22 +5,27 @@ import dummyData from './dummy-data';
 import './App.css';
 
 
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      postData: dummyData,
+    };
+  }
 
+  render() {
 
-
-
-console.log(dummyData)
-
-
-function App() {
-  return (
-    <div className="App">
-      
-      <SearchBarContainer />
-      <PostContainer data={dummyData}/>
-    </div>
-  );
+    return (
+      <div className="App">
+        <SearchBarContainer />
+        <PostContainer data={this.state.postData} />
+      </div>
+    );
+  }
 }
+
+
+
 
 export default App;
 
@@ -36,3 +41,5 @@ export default App;
 //     />
 //   ))
 // }
+
+
