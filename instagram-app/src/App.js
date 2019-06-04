@@ -9,9 +9,14 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      postData: dummyData,
+      postData: [],
     };
   }
+
+  componentDidMount() {
+    this.setState({ postData: dummyData });
+  }
+
 
   render() {
 
@@ -30,16 +35,5 @@ class App extends React.Component {
 export default App;
 
 
-// {
-//   this.state.friends.map(friend => (
-//     <Friend
-//       key={friend.id}
-//       friend={friend}
-//       deleteFriend={this.deleteFriend}
-//       markAsEnemy={this.markAsEnemy}
-//       setFriendToBeEdited={this.setFriendToBeEdited}
-//     />
-//   ))
-// }
 
 

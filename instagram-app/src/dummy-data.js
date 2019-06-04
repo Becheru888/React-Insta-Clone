@@ -3,7 +3,7 @@ const dummyData = [
         id: "a",
         username: "philzcoffee",
         thumbnailUrl: 'https://i.postimg.cc/RFvgTtgS/pic.jpg',
-        imageUrl: 'https://scontent-lhr3-1.cdninstagram.com/vp/2e4839077193d08763f7d26a0dddae9a/5D7B71E6/t51.2885-15/e35/58408899_1127274620785923_8144026756019881689_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com',
+        imageUrl: 'https://i.postimg.cc/43R77k5t/pic2.jpg ',
         likes: 400,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
@@ -28,7 +28,7 @@ const dummyData = [
         id: "b",
         username: "twitch",
         thumbnailUrl: 'https://i.postimg.cc/43R77k5t/pic2.jpg',
-        imageUrl: 'https://i.postimg.cc/43R77k5t/pic2.jpg',
+        imageUrl: 'https://scontent-lhr3-1.cdninstagram.com/vp/2e4839077193d08763f7d26a0dddae9a/5D7B71E6/t51.2885-15/e35/58408899_1127274620785923_8144026756019881689_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com',
         likes: 4307,
         timestamp: "July 15th 2017, 03:12:09 pm",
         comments: [
