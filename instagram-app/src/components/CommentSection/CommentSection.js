@@ -2,18 +2,22 @@ import React from "react";
 import uuid from "uuid";
 import PropTypes from "prop-types";
 
+
 class Comments extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       comments: this.props.comments,
+      likes:this.props.data.likes,
       newComment: "",
       data:this.props.data,
     };
 
     this.changeHandler = this.changeHandler.bind(this);
     this.addNewComment = this.addNewComment.bind(this);
+    this.giveLike = this.giveLike.bind(this);
   }
+
 
   changeHandler = e => {
     this.setState({ newComment: e.target.value });
@@ -31,13 +35,20 @@ class Comments extends React.Component {
     });
   };
 
+
+  giveLike = () => {
+    const likes = this.state.likes + 1;
+    this.setState({ likes });
+  }
+
   render() {
     return (
       <div className='comments-container'>
         <span className='icons-container'>
-          <img src='https://i.postimg.cc/mDvYdV1M/heart.png' alt='heart'/>
+          <img src='https://i.postimg.cc/mDvYdV1M/heart.png' alt='heart' onClick={this.giveLike}/>
           <img src='https://i.postimg.cc/pLf6Kh7q/chat.png' alt='chat'/>
         </span>
+        <span>{this.state.likes} Likes</span>
         {this.state.comments.map(comment => (
           <span key={comment.id}>
             <span className="username">{comment.username}</span>
