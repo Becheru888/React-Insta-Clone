@@ -1,12 +1,18 @@
 import React from 'react';
 import './App.css';
 import PostPage from './components/PostContainer/PostPage'
+import Login from './components/Login/Login'
 import withAuthenticate from '../src/authentification/withAuthenticate'
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostPage)
+
 
 class App extends React.Component {
+  constructor(){
+    super();
+    this.state ={
 
+    }
+  }
   render() {
 
     return (
@@ -17,7 +23,7 @@ class App extends React.Component {
   }
 }
 
-
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(Login);
 
 
 export default App;
