@@ -1,6 +1,6 @@
 import React from "react";
 import uuid from "uuid";
-import PropTypes from "prop-types";
+
 
 
 class Comments extends React.Component {
