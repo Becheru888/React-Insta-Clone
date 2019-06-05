@@ -3,7 +3,7 @@ import './App.css';
 import PostPage from './components/PostContainer/PostPage'
 import withAuthenticate from '../src/authentification/withAuthenticate'
 
-
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)
 
 class App extends React.Component {
 
@@ -11,7 +11,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <PostPage/>
+        <ComponentFromWithAuthenticate/>
       </div>
     );
   }
