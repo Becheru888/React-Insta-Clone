@@ -1,6 +1,51 @@
 import React, { Component } from 'react';
-import '../../../src/App.css'
+import styled from 'styled-components';
 
+
+const Wrapper = styled.div`
+  border: 1px solid #e6e6e6;
+  margin:20px auto;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width:35%;
+  height:400px;
+  padding-top:40px;
+
+  img{
+    margin:0 0 40px 0;
+    width:250px;
+    height:70px;
+  }
+  input, button {
+    margin:2px 0;
+    width:90%;
+    height:45px;
+    border-radius: 2px;
+    border: 1px solid #efefef;
+    
+
+    ::placeholder {
+     color: gray;
+     padding: 5px;
+}
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    width:100%;
+    flex-direction:column;
+  }
+
+  button {
+    background-color:#C4E0FA;
+    border:0;
+    border-radius:2px;
+    color:white;
+  }
+
+`
 
 class Login extends Component {
   constructor(props) {
@@ -15,7 +60,7 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleLoginSubmit = e => {
+  handleLoginSubmit = () => {
     const user = this.state.username;
     localStorage.setItem('user',user);
     window.location.reload();
@@ -23,13 +68,12 @@ class Login extends Component {
 
   render() {
     return (
-      <div className='login-wrapper'>
-        <h3>Welcome to Instagram</h3>
-        <div>Please Login</div>
+      <Wrapper className='login-wrapper'>
+        <img src='https://i.postimg.cc/pXqgSnkr/inLogo.png'/>
         <form>
           <input
             type="text"
-            placeholder="User Name"
+            placeholder="Phone number, username, or email"
             name="username"
             value={this.state.username}
             onChange={this.handleInputChange}
@@ -44,11 +88,11 @@ class Login extends Component {
             onChange={this.handleInputChange}
           />
           <br />
-          <button onClick={this.handleLoginSubmit}>
+          <button className='login' onClick={this.handleLoginSubmit}>
             Log In
           </button>
         </form>
-      </div>
+      </Wrapper>
     );
   }
 }
