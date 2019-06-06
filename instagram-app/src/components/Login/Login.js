@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   border: 1px solid #e6e6e6;
-  margin:20px auto;
+  margin:100px auto;
   display: flex;
   flex-direction:column;
   align-items: center;
-  width:35%;
+  width:25%;
   height:400px;
   padding-top:40px;
 
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   input, button {
     margin:2px 0;
     width:90%;
-    height:45px;
+    height:35px;
     border-radius: 2px;
     border: 1px solid #efefef;
     padding: 8px;
@@ -67,7 +67,11 @@ class Login extends Component {
     window.location.reload();
   };
 
+
+
   render() {
+    // const [shouldBeSelected, setShouldBeSelected] = useState(false);
+
     return (
       <Wrapper className='login-wrapper'>
         <img src='https://i.postimg.cc/pXqgSnkr/inLogo.png'/>
