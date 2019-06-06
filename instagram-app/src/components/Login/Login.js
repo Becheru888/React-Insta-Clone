@@ -11,14 +11,20 @@ const Wrapper = styled.div`
   width:25%;
   height:400px;
   padding-top:40px;
+  background-color:white;
 
   img{
     margin:0 0 40px 0;
     width:250px;
     height:70px;
   }
+  
+  input {
+    background-color:#FAFAFA;
+  }
+
   input, button {
-    margin:2px 0;
+    margin:5px 10px;
     width:90%;
     height:35px;
     border-radius: 2px;
@@ -37,6 +43,7 @@ const Wrapper = styled.div`
     align-items: center;
     width:100%;
     flex-direction:column;
+    
   }
 
   button {
