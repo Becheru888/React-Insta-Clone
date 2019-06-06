@@ -53,7 +53,7 @@ body {
   background-color: #fafafa;
 }
 
-.search-bar-container {
+/* .search-bar-container {
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0,0,0,.0975);
   height: 77px;
@@ -61,7 +61,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   margin: 0 0 60px 0;
-}
+} */
 
 .icon {
   width: 30px;

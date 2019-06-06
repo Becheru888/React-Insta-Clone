@@ -23,11 +23,12 @@ const Wrapper = styled.div`
     height:45px;
     border-radius: 2px;
     border: 1px solid #efefef;
+    padding: 8px;
     
 
     ::placeholder {
      color: gray;
-     padding: 5px;
+     
 }
   }
 
