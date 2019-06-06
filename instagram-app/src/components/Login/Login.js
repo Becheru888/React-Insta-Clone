@@ -51,6 +51,9 @@ const Wrapper = styled.div`
     border:0;
     border-radius:2px;
     color:white;
+    :hover {
+      background-color:#3897F0;
+    }
   }
 
 `
