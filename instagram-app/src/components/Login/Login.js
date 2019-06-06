@@ -2,61 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 
-const Wrapper = styled.div`
-  border: 1px solid #e6e6e6;
-  margin:100px auto;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  width:25%;
-  height:400px;
-  padding-top:40px;
-  background-color:white;
-
-  img{
-    margin:0 0 40px 0;
-    width:250px;
-    height:70px;
-  }
-  
-  input {
-    background-color:#FAFAFA;
-  }
-
-  input, button {
-    margin:5px 10px;
-    width:90%;
-    height:35px;
-    border-radius: 2px;
-    border: 1px solid #efefef;
-    padding: 8px;
-    
-
-    ::placeholder {
-     color: gray;
-     
-}
-  }
-
-  form {
-    display: flex;
-    align-items: center;
-    width:100%;
-    flex-direction:column;
-    
-  }
-
-  button {
-    background-color:#C4E0FA;
-    border:0;
-    border-radius:2px;
-    color:white;
-    :hover {
-      background-color:#3897F0;
-    }
-  }
-
-`
 
 class Login extends Component {
   constructor(props) {
@@ -113,3 +58,71 @@ class Login extends Component {
 }
 
 export default Login;
+
+
+
+
+
+
+
+//// Style - Component //////
+
+
+
+
+
+const Wrapper = styled.div`
+  border: 1px solid #e6e6e6;
+  margin:100px auto;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width:25%;
+  height:400px;
+  padding-top:40px;
+  background-color:white;
+
+  img{
+    margin:0 0 40px 0;
+    width:250px;
+    height:70px;
+  }
+  
+  input {
+    background-color:#FAFAFA;
+  }
+
+  input, button {
+    margin:5px 10px;
+    width:80%;
+    height:35px;
+    border-radius: 2px;
+    border: 1px solid #efefef;
+    padding: 8px;
+    
+
+    ::placeholder {
+     color: gray;
+     
+}
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    width:100%;
+    flex-direction:column;
+    
+  }
+
+  button {
+    background-color:#C4E0FA;
+    border:0;
+    border-radius:2px;
+    color:white;
+    :hover {
+      background-color:#3897F0;
+    }
+  }
+
+`

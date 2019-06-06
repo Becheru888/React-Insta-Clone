@@ -55,73 +55,29 @@ body {
 
 
 
-/* .icon {
-  width: 30px;
-  height: 30px;
-  padding: 20px;
-} */
 
 
 
 
 
-.post {
-  display: block;
-  width: 614px;
-  margin: 0 auto 60px auto;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 3px;
-}
-
-.post .header {
-  display: flex;
-  align-items: center;
-  height: 28px;
-  padding: 16px;
-}
-
-span.username {
-  font-weight: bold;
-  margin-right: 10px;
-  font-family: 'Mandali', sans-serif;
-}
-
-.post .header img {
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  margin-right: 16px;
-}
 
 
 
-.content img {
-  max-width: 100%;
-}
-
-.comments-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 16px;
-  font-family: 'Mandali', sans-serif;
-}
-
-span{
-  line-height: 1.7;
-}
 
 
-.icons-container img {
-  margin:5px 20px 5px 0;
-  width: 20px;
-  height: 20px;
-}
 
-.comm-input{
-  border: #ffffff;
-  margin: 20px 0;
-  height: 30px;
-  width: 100%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
