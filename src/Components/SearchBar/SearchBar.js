@@ -1,12 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'
+
+class SearchBar extends React.Component {
+    constructor(props){
+        super(props)
+    }
 
 
-
-
-const SearchBarContainer = () => {
-    return (
-        <Header className="search-bar-container">
+    render(){
+        return (
+            <Header className="search-bar-container">
             <LogoHeader className="logos">
                 <img className="camera-icon" src='https://i.postimg.cc/mZNxQnHQ/camera.png' alt="Camera icon"/>
                 <div></div>
@@ -21,17 +24,12 @@ const SearchBarContainer = () => {
                 <span><img className='icon' src="https://img.icons8.com/ios/50/000000/gender-neutral-user.png"/></span>
             </LogoImage>
         </Header>
-    );
+        )
+    }
+
 }
 
-export default SearchBarContainer;
-
-
-
-
-
-
-
+export default SearchBar;
 
 
 
