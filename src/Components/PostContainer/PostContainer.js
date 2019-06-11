@@ -4,26 +4,44 @@ import styled from 'styled-components';
 import Moment from 'react-moment';
 
 class PostContainer extends React.Component{
-    constructor(props){
-        super(props)
+  constructor(props){
+    super(props)
+    this.state = {
+      comments: this.props.data.comments,
+      newComment: ''
     }
+  }
 
-   
+
+  changeHandler = e => {
+    this.state({})
+  }
+
+
+
     render(){
-
+     
         return <div>{this.props.data.map(data =>
 
             <PostWrapper key={data.username}>
-            <div className='header'><img src={data.thumbnailUrl}/><p>{data.username}</p></div>
-            <div className='content'><img src={data.imageUrl}/></div>
+            <div className='header'><img src={data.thumbnailUrl} alt='thumbnailurl'/><p className='username'>{data.username}</p></div>
+            <div className='content'><img src={data.imageUrl} alt='imageurl'/></div>
+
 
             <section className='comments-container'>
             <div className='icons-container'>
             <img src='https://i.postimg.cc/mDvYdV1M/heart.png' alt='heart' onClick={this.giveLike}/>
             <img src='https://i.postimg.cc/pLf6Kh7q/chat.png' alt='chat'/> <p className='likes'>{data.likes} Likes</p> </div>
-            <div><CommentSection comments={data.comments}/></div>
+            <div><CommentSection comments={data.comments} key={data.timestamp}/></div>
             <div><Moment  className='stamp' fromNow>{data.timestamp}</Moment ></div>
-            <div><input type='text' placeholder='Add comment' className='comm-input'/></div>
+            <div className='bar'></div>
+            <form>
+            <div><input type='text' placeholder='Add comment...' className='comm-input'/></div>
+            </form>
+
+
+
+
             </section>
 
 
@@ -34,6 +52,19 @@ class PostContainer extends React.Component{
 }
 
 export default PostContainer;
+
+
+
+
+
+
+
+
+
+
+/// Styled Component ////
+
+
 
 
 
@@ -61,7 +92,7 @@ const PostWrapper = styled.div`
 }
 }
 
-span.username {
+span.username, .username {
   font-weight: bold;
   font-family: 'Mandali', sans-serif;
 }
@@ -87,9 +118,11 @@ span.username {
 
 .comm-input{
   border: #ffffff;
-  margin: 20px 0;
+  margin: 10px 0;
   height: 30px;
   width: 100%;
+  padding: 5px;
+
 }
 
 .stamp {
@@ -98,5 +131,11 @@ span.username {
 
 .likes {
     margin:5px 0;
+}
+
+.bar {
+    padding:5px;
+    width:100%;
+    border-bottom: 1px solid #e0e0e0;
 }
 `

@@ -5,16 +5,16 @@ class CommentSection extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            comments : this.props.comments
+            comments : this.props.comments,
         }
     }
 
     
     render(){
-       console.log(this.state.comments)
+      
         return (
             <PostWrapper>{this.props.comments.map(comment =>          
-                <div><p><span>{comment.username}</span>{comment.text}</p></div>
+                <div key={Math.floor(Math.random() * 99999)}><p><span>{comment.username}</span>{comment.text}</p></div>
                 )}</PostWrapper>
         )
     }
@@ -23,13 +23,31 @@ class CommentSection extends React.Component {
 
 export default CommentSection;
 
+
+
+
+
+
+
+
+
+/// Styled component ////
+
+
+
+
+
+
+
+
 const PostWrapper = styled.div`
 span {
   font-weight: bold;
   font-family: 'Mandali', sans-serif;
+  margin-right: 8px;
 }
 
 p {
-    margin: 5px 0;
+    margin: 8px 0;
 }
 `
