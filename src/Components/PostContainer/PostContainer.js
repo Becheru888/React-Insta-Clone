@@ -1,22 +1,9 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection'
 import styled from 'styled-components';
-import Moment from 'react-moment';
+
 
 class PostContainer extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      comments: this.props.data.comments,
-      newComment: ''
-    }
-  }
-
-
-  changeHandler = e => {
-    this.state({})
-  }
-
 
 
     render(){
@@ -32,15 +19,9 @@ class PostContainer extends React.Component{
             <div className='icons-container'>
             <img src='https://i.postimg.cc/mDvYdV1M/heart.png' alt='heart' onClick={this.giveLike}/>
             <img src='https://i.postimg.cc/pLf6Kh7q/chat.png' alt='chat'/> <p className='likes'>{data.likes} Likes</p> </div>
-            <div><CommentSection comments={data.comments} key={data.timestamp}/></div>
-            <div><Moment  className='stamp' fromNow>{data.timestamp}</Moment ></div>
+            <div><CommentSection comments={data.comments} key={data.timestamp} date={data.timestamp}/></div>
+
             <div className='bar'></div>
-            <form>
-            <div><input type='text' placeholder='Add comment...' className='comm-input'/></div>
-            </form>
-
-
-
 
             </section>
 
