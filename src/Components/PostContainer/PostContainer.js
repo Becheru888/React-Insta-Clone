@@ -13,19 +13,9 @@ class PostContainer extends React.Component{
             <PostWrapper key={data.username}>
             <div className='header'><img src={data.thumbnailUrl} alt='thumbnailurl'/><p className='username'>{data.username}</p></div>
             <div className='content'><img src={data.imageUrl} alt='imageurl'/></div>
-
-
             <section className='comments-container'>
-            <div className='icons-container'>
-            <img src='https://i.postimg.cc/mDvYdV1M/heart.png' alt='heart' onClick={this.giveLike}/>
-            <img src='https://i.postimg.cc/pLf6Kh7q/chat.png' alt='chat'/> <p className='likes'>{data.likes} Likes</p> </div>
-            <div><CommentSection comments={data.comments} key={data.timestamp} date={data.timestamp}/></div>
-
-            <div className='bar'></div>
-
+            <div><CommentSection comments={data.comments} key={data.timestamp} date={data.timestamp} likes={data.likes}/></div>
             </section>
-
-
             </PostWrapper>
 
             )}</div>
@@ -91,11 +81,7 @@ span.username, .username {
   text-align:left;
 }
 
-.icons-container img {
-  margin:5px 20px 5px 0;
-  width: 20px;
-  height: 20px;
-}
+
 
 .comm-input{
   border: #ffffff;
@@ -114,9 +100,5 @@ span.username, .username {
     margin:5px 0;
 }
 
-.bar {
-    padding:5px;
-    width:100%;
-    border-bottom: 1px solid #e0e0e0;
-}
+
 `

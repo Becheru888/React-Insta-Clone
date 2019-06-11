@@ -8,13 +8,16 @@ class CommentSection extends React.Component {
         this.state = {
             comments : this.props.comments,
             newComment: '',
+            likes: this.props.likes,
         }
 
         
     this.changeHandler = this.changeHandler.bind(this);
     this.addNewComment = this.addNewComment.bind(this);
+    this.giveLike = this.giveLike.bind(this)
     }
 
+    
 
 changeHandler = e => {
     this.setState({newComment: e.target.value})
@@ -23,7 +26,7 @@ changeHandler = e => {
 addNewComment = e => {
     e.preventDefault();
     this.setState({
-          comments: this.state.comments.concat({
+           comments: this.state.comments.concat({
            key : Math.floor(Math.random() * 99999),
            username: 'Remi',
            text:this.state.newComment
@@ -32,13 +35,21 @@ addNewComment = e => {
     })
 }
 
+giveLike = () => {
+   this.setState({likes: this.props.likes + 1})
+}
+
     
     render(){
-      
         return (
             <PostWrapper>
+            <div className='icons-container'>
+            <img src='https://i.postimg.cc/mDvYdV1M/heart.png' alt='heart' onClick={this.giveLike}/>
+            <img src='https://i.postimg.cc/pLf6Kh7q/chat.png' alt='chat'/> <p className='likes'>{this.state.likes} Likes</p>
+            </div>
             {this.state.comments.map(comment => <div key={Math.floor(Math.random() * 99999)}><p><span>{comment.username}</span>{comment.text}</p></div>)}
             <div><Moment  className='stamp' fromNow>{this.props.date}</Moment ></div>
+            <div className='bar'></div>
 
             <form onSubmit={this.addNewComment}>
             <div>
@@ -89,5 +100,15 @@ span {
 
 p {
     margin: 8px 0;
+}
+.icons-container img {
+  margin:5px 20px 5px 0;
+  width: 20px;
+  height: 20px;
+}
+.bar {
+    padding:5px;
+    width:100%;
+    border-bottom: 1px solid #e0e0e0;
 }
 `
