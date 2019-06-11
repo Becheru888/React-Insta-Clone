@@ -5,12 +5,22 @@ import PostContainer from './Components/PostContainer/PostContainer'
 import dummyData from './dummy-data'
 
 class App extends React.Component {
-  
+  constructor(props){
+    super(props)
+    this.state ={
+      data : []
+    }
+  }
+
+componentDidMount(){
+  this.setState({data: dummyData})
+}
+
   render(){
   return (
     <div className="App">
       <SearchBar/>
-      <PostContainer data={dummyData}/>
+      <PostContainer data={this.state.data}/>
     </div>
   );
   }
