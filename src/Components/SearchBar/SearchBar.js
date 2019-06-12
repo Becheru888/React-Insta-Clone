@@ -3,6 +3,11 @@ import styled from 'styled-components'
 
 class SearchBar extends React.Component {
  
+  logout = () => {
+    localStorage.removeItem('user')
+    window.location.reload();
+  }
+
     render(){
         return (
             <Header className="search-bar-container">
@@ -17,7 +22,7 @@ class SearchBar extends React.Component {
             <LogoImage className="searc-bar-controls">
                 <span><img className='icon' src="https://img.icons8.com/ios/50/000000/compass.png" alt='compass'/></span>
                 <span><img className='icon' src="https://img.icons8.com/ios/50/000000/hearts.png" alt='heart'/></span>
-                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/gender-neutral-user.png" alt='user'/></span>
+                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/gender-neutral-user.png" alt='user' onClick={this.logout}/></span>
             </LogoImage>
         </Header>
         )

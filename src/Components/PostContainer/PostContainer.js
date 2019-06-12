@@ -6,7 +6,7 @@ import styled from 'styled-components';
 class PostContainer extends React.Component{
 
 
-  
+ 
 
 
     render(){
@@ -14,7 +14,7 @@ class PostContainer extends React.Component{
         return <div>{this.props.data.map(data =>
 
             <PostWrapper key={data.username}>
-            <div className='header'><img src={data.thumbnailUrl} alt='thumbnailurl' onClick={this.logout}/><p className='username'>{data.username}</p></div>
+            <div className='header'><img src={data.thumbnailUrl} alt='thumbnailurl'/><p className='username'>{data.username}</p></div>
             <div className='content'><img src={data.imageUrl} alt='imageurl'/></div>
             <section className='comments-container'>
             <div><CommentSection comments={data.comments} key={data.timestamp} date={data.timestamp} likes={data.likes}/></div>
