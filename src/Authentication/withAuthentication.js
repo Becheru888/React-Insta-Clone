@@ -11,10 +11,10 @@ const withAuthentication = PostsPage => Login =>
         }
 
         componentDidMount() {
-            if (!localStorage.getItem('user')) {
-                this.setState({ loggedIn: false });
-            } else {
+            if (localStorage.getItem('user')) {
                 this.setState({ loggedIn: true });
+            } else {
+                this.setState({ loggedIn: false });
             }
         }
 
