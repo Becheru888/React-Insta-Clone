@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import PostPage from './Components/PostContainer/PostsPage'
+import PostPage from './Components/PostContainer/PostsPage';
+import Login from './Components/Login/Login'
 
 
 class App extends React.Component {
@@ -12,12 +13,10 @@ class App extends React.Component {
   }
 
 
-
-
   render(){
   return (
     <div className="App">
-      <PostPage/>
+      <Login/>
     </div>
   );
   }
