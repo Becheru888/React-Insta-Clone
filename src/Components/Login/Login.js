@@ -53,7 +53,7 @@ export default class Login extends React.Component{
 }
 
 
-//// Style - Component //////
+//// Styled - Component //////
 
 
 const Wrapper = styled.div`

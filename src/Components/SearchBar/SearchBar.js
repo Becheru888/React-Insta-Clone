@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components'
 
 class SearchBar extends React.Component {
- 
+  constructor(props){
+    super(props)
+  }
+
   logout = () => {
     localStorage.removeItem('user')
     window.location.reload();
@@ -17,12 +20,12 @@ class SearchBar extends React.Component {
                 <img className="instagram-logo" src='https://i.postimg.cc/pXqgSnkr/inLogo.png' alt="Instagram Clone Logo"/>
             </LogoHeader>
             <SearchInput className="search-bar">
-                <input placeholder="Search"/>
+                <input placeholder="Search" type='text' onKeyDown={this.props.filterPost}/>
             </SearchInput>
             <LogoImage className="searc-bar-controls">
                 <span><img className='icon' src="https://img.icons8.com/ios/50/000000/compass.png" alt='compass'/></span>
                 <span><img className='icon' src="https://img.icons8.com/ios/50/000000/hearts.png" alt='heart'/></span>
-                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/gender-neutral-user.png" alt='user' onClick={this.logout}/></span>
+                <span><img className='icon' src="https://i.postimg.cc/Y25mPvPY/logout.png" alt='user' onClick={this.logout}/></span> 
             </LogoImage>
         </Header>
         )
@@ -34,7 +37,7 @@ export default SearchBar;
 
 
 
-//// Style - Component //////
+//// Styled - Component //////
 
 
 const Header = styled.div`
@@ -82,4 +85,5 @@ const LogoImage = styled.div`
   height: 30px;
   padding: 20px;
 }
+
 `
