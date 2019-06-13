@@ -14,6 +14,10 @@ export default class Login extends React.Component{
     handleInputChange = e => {
         this.setState({ username: e.target.value });
       };
+
+      handleInputChangeP = e => {
+        this.setState({ password: e.target.value });
+      };
     
       handleLoginSubmit = () => {
         localStorage.setItem('user',this.state.username);
@@ -39,7 +43,7 @@ export default class Login extends React.Component{
                 placeholder="Password"
                 name="password"
                 value={this.state.password}
-                onChange={this.handleInputChange}
+                onChange={this.handleInputChangeP}
               />
               <br />
               <button className='login' onClick={this.handleLoginSubmit}>
@@ -62,7 +66,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction:column;
   align-items: center;
-  width:25%;
+  width:30%;
   height:400px;
   padding-top:40px;
   background-color:white;

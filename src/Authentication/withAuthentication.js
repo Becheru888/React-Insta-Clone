@@ -6,7 +6,7 @@ const withAuthentication = PostsPage => Login =>
             super(props);
 
             this.state = {
-                loggedIn: false
+                loggedIn: false,
             };
         }
 
@@ -14,6 +14,7 @@ const withAuthentication = PostsPage => Login =>
             if (localStorage.getItem('user')) {
                 this.setState({ loggedIn: true });
             } else {
+                alert("Please Login with any username and password!")
                 this.setState({ loggedIn: false });
             }
         }

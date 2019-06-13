@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
             <LogoHeader className="logos">
                 <img className="camera-icon" src='https://i.postimg.cc/mZNxQnHQ/camera.png' alt="Camera icon"/>
                 <div></div>
-                <img className="instagram-logo" src='https://i.postimg.cc/pXqgSnkr/inLogo.png' alt="Instagram Clone Logo"/>
+                <a href='https://www.instagram.com/'><img className="instagram-logo" src='https://i.postimg.cc/pXqgSnkr/inLogo.png' alt="Instagram Clone Logo"/></a>
             </LogoHeader>
             <SearchInput className="search-bar">
                 <input placeholder="Search" type='text' onKeyDown={this.props.filterPost}/>

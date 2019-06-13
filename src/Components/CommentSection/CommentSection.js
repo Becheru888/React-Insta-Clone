@@ -39,6 +39,7 @@ giveLike = () => {
    this.setState({likes: this.props.likes + 1})
 }
 
+
     
     render(){
         return (
