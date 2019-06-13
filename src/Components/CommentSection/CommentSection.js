@@ -28,7 +28,7 @@ addNewComment = e => {
     this.setState({
            comments: this.state.comments.concat({
            key : Math.floor(Math.random() * 99999),
-           username: 'Remi',
+           username: localStorage.getItem('user'),
            text:this.state.newComment
         }),
         newComment:''

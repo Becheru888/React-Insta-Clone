@@ -17,7 +17,7 @@ class PostContainer extends React.Component{
             <div className='header'><img src={data.thumbnailUrl} alt='thumbnailurl'/><p className='username'>{data.username}</p></div>
             <div className='content'><img src={data.imageUrl} alt='imageurl'/></div>
             <section className='comments-container'>
-            <div><CommentSection comments={data.comments} key={data.timestamp} date={data.timestamp} likes={data.likes}/></div>
+            <div><CommentSection comments={data.comments} key={data.timestamp} date={data.timestamp} likes={data.likes} data={this.props.data}/></div>
             </section>
             </PostWrapper>
 
