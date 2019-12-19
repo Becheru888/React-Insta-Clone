@@ -1,41 +1,43 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'
 
+class SearchBar extends React.Component {
+  constructor(props){
+    super(props)
+  }
 
+  logout = () => {
+    localStorage.removeItem('user')
+    window.location.reload();
+  }
 
-
-const SearchBarContainer = () => {
-    return (
-        <Header className="search-bar-container">
+    render(){
+        return (
+            <Header className="search-bar-container">
             <LogoHeader className="logos">
                 <img className="camera-icon" src='https://i.postimg.cc/mZNxQnHQ/camera.png' alt="Camera icon"/>
                 <div></div>
-                <img className="instagram-logo" src='https://i.postimg.cc/pXqgSnkr/inLogo.png' alt="Instagram Clone Logo"/>
+                <a href='https://www.instagram.com/'><img className="instagram-logo" src='https://i.postimg.cc/pXqgSnkr/inLogo.png' alt="Instagram Clone Logo"/></a>
             </LogoHeader>
             <SearchInput className="search-bar">
-                <input placeholder="Search"/>
+                <input placeholder="Search" type='text' onKeyDown={this.props.filterPost}/>
             </SearchInput>
             <LogoImage className="searc-bar-controls">
-                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/compass.png"/></span>
-                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/hearts.png"/></span>
-                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/gender-neutral-user.png"/></span>
+                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/compass.png" alt='compass'/></span>
+                <span><img className='icon' src="https://img.icons8.com/ios/50/000000/hearts.png" alt='heart'/></span>
+                <span><img className='icon' src="https://i.postimg.cc/Y25mPvPY/logout.png" alt='user' onClick={this.logout}/></span> 
             </LogoImage>
         </Header>
-    );
+        )
+    }
+
 }
 
-export default SearchBarContainer;
+export default SearchBar;
 
 
 
-
-
-
-
-
-
-
-//// Style - Component //////
+//// Styled - Component //////
 
 
 const Header = styled.div`
@@ -83,4 +85,5 @@ const LogoImage = styled.div`
   height: 30px;
   padding: 20px;
 }
+
 `
